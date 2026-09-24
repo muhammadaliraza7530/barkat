@@ -27,7 +27,7 @@ export function Header() {
           <img
             src={site.logo}
             alt="Barkat Engineering logo"
-            className="h-13 w-25 overflow-hidden rounded-xl object-contain p-1 transition-transform duration-500 group-hover:scale-105 lg:h-15 lg:w-28"
+            className="h-14 w-25 overflow-hidden rounded-xl object-contain p-1 transition-transform duration-500 group-hover:scale-105 lg:h-15 lg:w-28"
           />
           <span className="hidden text-xs font-bold uppercase leading-tight tracking-[0.12em] sm:inline sm:text-sm">
             {site.name}
