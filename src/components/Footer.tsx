@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { navLinks, site } from "@/lib/site-data";
-import logoAsset from "@/assets/barkat-engineering-logo.jpeg.asset.json";
 
 export function Footer() {
   return (
@@ -9,12 +8,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Barkat Engineering logo" className="h-16 w-32 rounded-md bg-card object-contain p-1" />
+            <img src={site.logo} alt="Barkat Engineering logo" className="h-16 w-32 rounded-md bg-card object-contain p-1" />
             <span className="text-sm font-bold uppercase tracking-[0.12em]">{site.name}</span>
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-            {site.tagline}. Architecture, interior design and turnkey construction across Lahore, Faisalabad and
-            Sialkot.
+            {site.tagline}. Building A Better Tomorrow Since 2016.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.16em]">
             {[
@@ -54,9 +52,14 @@ export function Footer() {
           <ul className="mt-5 space-y-4 text-sm text-muted-foreground">
             <li className="flex gap-3">
               <Phone className="mt-0.5 size-4 shrink-0 text-primary" />
-              <a href={`tel:${site.phoneTel}`} className="hover:text-primary">
-                {site.phone}
-              </a>
+              <div className="flex flex-col gap-1">
+                <a href={`tel:${site.secondaryPhoneTel}`} className="hover:text-primary">
+                  {site.secondaryPhone}
+                </a>
+                <a href={`tel:${site.phoneTel}`} className="hover:text-primary">
+                  {site.phone}
+                </a>
+              </div>
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 size-4 shrink-0 text-primary" />
@@ -74,10 +77,10 @@ export function Footer() {
 
       <div className="border-t border-border py-6 text-center text-xs text-muted-foreground">
         <p>
-          © {new Date().getFullYear()} {site.name}. All rights reserved.
+          © 2026 {site.name} Pvt. Ltd. | All Rights Reserved
         </p>
         <p className="mt-2 tracking-[0.14em] uppercase">
-          Design and develop by <span className="font-bold text-primary">Brand Up</span>
+          CEO: Engr. Muhammad Ali
         </p>
       </div>
     </footer>

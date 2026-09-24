@@ -5,7 +5,7 @@
  */
 
 export const img = {
-  logo: "/logo.jpg",
+  logo: "/logo.jpeg",
 
   // Photoreal hero / feature photography
   spanishVilla: "/homes/hero-spanish.jpg",
@@ -29,16 +29,17 @@ export const site = {
   fullName: "Barkat Engineering — Construction Company",
   tagline: "Construction Company",
   logo: img.logo,
-  address: "DHA Phase 6, Lahore, Punjab, Pakistan",
-  addressShort: "New Super Town, Lahore",
-  email: "aspiringtalks@gmail.com",
-  phone: "0306 0221896",
-  phoneTel: "+923060221896",
+  address: "Office No. 502, Building 92, Street-E, Midway Commercial-A, Bahria Town, Karachi.",
+  addressShort: "Bahria Town, Karachi",
+  email: "barkatengineering@gmail.com",
+  phone: "+92 333 3366 523",
+  phoneTel: "+923333366523",
+  secondaryPhone: "+92 300 3195 203",
+  secondaryPhoneTel: "+923003195203",
   facebook: "https://facebook.com/AspiringHomes",
   instagram: "https://instagram.com/aspiringhomesofficial",
   youtube: "https://youtube.com/@AspiringHomes",
-  whatsapp:
-    "https://wa.me/923060221896?text=Hello%20Aspiring%20Homes%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project.",
+  whatsapp: "https://wa.me/923333366523?text=Hello%20Barkat%20Engineering%2C%20I%20would%20like%20a%20free%20quotation.",
   hours: [
     { day: "Monday to Thursday", time: "9am to 7pm" },
     { day: "Friday", time: "9am to 12pm & 3pm to 7pm" },
@@ -57,48 +58,23 @@ export const navLinks = [
 
 export const heroSlides = [
   {
-    title: "We design and build the home you keep imagining",
+    title: "We Build Your Vision — Building A Better Tomorrow",
     highlight:
-      "Architecture, interiors and full construction — planned, drawn and executed by one team from concept to handover.",
+      "Since 2016, Barkat Engineering is Karachi's trusted name for Civil, Electrical & Mechanical construction. Residential, Commercial & Industrial — We do it all.",
     image: img.luxuryVilla,
-  },
-  {
-    title: "Spanish, classical and modern homes",
-    highlight:
-      "Arched colonnades, terracotta roofs or sharp contemporary lines — we build the language your family loves.",
-    image: img.spanishVilla,
-  },
-  {
-    title: "Making quality houses since 2019",
-    highlight:
-      "From the first 2D plan to the final coat of paint, our designers and site teams turn your plot into a home.",
-    image: img.luxuryHouse,
-  },
-  {
-    title: "Concept to creation, under one roof",
-    highlight:
-      "Grey structure, finishing, interiors and 3D visualisation delivered across Lahore, Faisalabad and Sialkot.",
-    image: img.courtyard,
   },
 ];
 
 export const stats = [
-  { value: "2019", label: "Building since" },
-  { value: "50+", label: "Homes designed & built" },
-  { value: "3", label: "Cities served" },
+  { value: "8+", label: "Years experience" },
+  { value: "A-Z", label: "Complete solutions" },
+  { value: "100%", label: "Quality focused" },
 ];
 
 /** Branded social posts — shown full-frame, never cropped. */
 export const posts = [
-  { image: "/posts/post-1.jpg", title: "Modern Facade Residence", location: "Sialkot", tag: "Coming Soon" },
-  { image: "/posts/post-2.jpg", title: "Crafting Classic Beauty", location: "Lahore", tag: "In Progress" },
-  { image: "/posts/post-3.jpg", title: "Concept to Creation", location: "Lahore", tag: "In Progress" },
-  { image: "/posts/post-4.jpg", title: "Classical Grand Residence", location: "Faisalabad", tag: "Coming Soon" },
-  { image: "/posts/post-5.jpg", title: "Classic Villa Handover", location: "Lahore", tag: "Completed" },
-  { image: "/posts/post-6.jpg", title: "Building Dreams", location: "Lahore", tag: "Under Construction" },
-  { image: "/posts/post-7.jpg", title: "Constructing Excellence", location: "Lahore", tag: "Under Construction" },
-  { image: "/posts/post-8.jpg", title: "The Reflection — Night", location: "Sialkot", tag: "Coming Soon" },
-  { image: "/posts/post-9.jpg", title: "The Reflection — Duplex", location: "Sialkot", tag: "Coming Soon" },
+  { image: "/posts/post1.jpeg", title: "Modern Facade Residence", location: "Karachi", tag: "Latest Project" },
+  { image: "/posts/post2.jpeg", title: "Building A Better Tomorrow", location: "Karachi", tag: "Latest Project" },
 ];
 
 export const videoGallery = [
@@ -143,46 +119,25 @@ export const testimonials = [
 
 export const services = [
   {
-    slug: "architecture",
-    title: "Architecture Design",
+    slug: "civil-construction",
+    title: "Civil Construction",
     image: img.luxuryHouse,
-    short: "2D planning, 3D elevation design and complete working drawings for your plot.",
-    body: "2D planning, 3D elevation design and complete working drawings tailored to your plot size and family needs. Every drawing is developed until you approve each detail, so nothing is left to guesswork on site.",
+    short: "Grey structure, finishing, renovation and interior works for houses, plazas and apartments.",
+    body: "Grey structure, finishing, renovation and interior works for houses, plazas and apartments.",
   },
   {
-    slug: "construction",
-    title: "Construction",
+    slug: "electrical-works",
+    title: "Electrical Works",
     image: img.brickFront,
-    short: "Grey structure and finishing packages with quality material and trained labour.",
-    body: "Grey structure and finishing packages with quality material, trained labour and transparent site reporting. Our own supervised crews cast columns, beams and slabs strictly to the approved drawings.",
+    short: "Complete wiring, lighting systems, industrial panels and maintenance.",
+    body: "Complete wiring, lighting systems, industrial panels and maintenance for residential, commercial and industrial projects.",
   },
   {
-    slug: "interior",
-    title: "Interior Design",
+    slug: "mechanical-works",
+    title: "Mechanical Works",
     image: img.greyClassic,
-    short: "Living, bedroom, kitchen and ceiling design with lighting and furniture detail.",
-    body: "Living, bedroom, kitchen and ceiling design with lighting layouts, furniture detail and execution — designed and installed by the same team that built your structure.",
-  },
-  {
-    slug: "renovation",
-    title: "Renovation",
-    image: img.completedVilla,
-    short: "Facade upgrades, layout changes and full renovation of existing spaces.",
-    body: "Facade upgrades, layout changes and full renovation of existing homes and commercial spaces — re-elevated, remodelled and finished without you leaving the neighbourhood you love.",
-  },
-  {
-    slug: "visualisation",
-    title: "3D Visualisation",
-    image: img.classicMansion,
-    short: "Photoreal exterior and interior renders before a single brick is laid.",
-    body: "Photoreal exterior and interior renders so you can see your home before a single brick is laid. Materials, lighting and landscaping are all visualised so approvals are quick and confident.",
-  },
-  {
-    slug: "marketing",
-    title: "Marketing & Media",
-    image: img.spanishVilla,
-    short: "Photography, reels and brand content for developers and builders.",
-    body: "Photography, reels and brand content for developers and builders who want their work seen — the same media team that produces our own project films.",
+    short: "HVAC, plumbing, fabrication and mechanical installations.",
+    body: "HVAC, plumbing, fabrication and mechanical installations delivered by an experienced team.",
   },
 ];
 

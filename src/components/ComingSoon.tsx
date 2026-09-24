@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, Building2, HardHat } from "lucide-react";
-import logoAsset from "@/assets/barkat-engineering-logo.jpeg.asset.json";
+import { site } from "@/lib/site-data";
 
 export function ComingSoon({ page }: { page: string }) {
   return (
@@ -15,7 +15,7 @@ export function ComingSoon({ page }: { page: string }) {
         </div>
 
         <img
-          src={logoAsset.url}
+          src={site.logo}
           alt="Barkat Engineering construction company logo"
           className="mx-auto mt-8 w-full max-w-[290px] rounded-md bg-card object-contain p-3 shadow-xl sm:max-w-[360px]"
         />

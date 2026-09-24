@@ -3,7 +3,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { navLinks, site } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/barkat-engineering-logo.jpeg.asset.json";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,9 +25,9 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:h-24 lg:px-8">
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src={logoAsset.url}
+            src={site.logo}
             alt="Barkat Engineering logo"
-            className="h-12 w-24 rounded-md bg-card object-contain p-1 transition-transform duration-500 group-hover:scale-105 lg:h-14 lg:w-28"
+            className="h-12 w-24 overflow-hidden rounded-xl object-contain p-1 transition-transform duration-500 group-hover:scale-105 lg:h-14 lg:w-28"
           />
           <span className="hidden text-xs font-bold uppercase leading-tight tracking-[0.12em] sm:inline sm:text-sm">
             {site.name}
@@ -53,7 +52,7 @@ export function Header() {
             href={`tel:${site.phoneTel}`}
             className="sheen-on-hover hidden items-center gap-2 rounded-full border border-primary/50 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:inline-flex"
           >
-            <Phone className="size-3.5" /> {site.phone}
+            <Phone className="size-3.5" /> Get Free Quote
           </a>
           <button
             type="button"

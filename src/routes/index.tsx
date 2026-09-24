@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Check, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { heroSlides, process, services, site, stats, showreelUrl, img } from "@/lib/site-data";
 import { projects } from "@/lib/site";
@@ -18,12 +18,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Barkat Engineering delivers architecture, engineering and construction services for quality residential projects.",
+          "Since 2016, Barkat Engineering has delivered trusted Civil, Electrical and Mechanical construction services in Karachi.",
       },
       { property: "og:title", content: "Barkat Engineering — Construction Company" },
       {
         property: "og:description",
-        content: "Villas, Spanish houses and modern homes — designed, built and finished by one team.",
+        content: "Civil, Electrical and Mechanical construction for Residential, Commercial and Industrial projects.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -99,20 +99,20 @@ function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <Link
-            to="/projects"
-            className="btn-shake sheen-on-hover inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent"
-          >
-            View our work <ArrowRight className="size-4" />
-          </Link>
           <a
             href={site.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-primary/60 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >
-            <Phone className="size-4" /> WhatsApp us
+            <Phone className="size-4" /> Get Free Quotation
           </a>
+          <Link
+            to="/projects"
+            className="btn-shake sheen-on-hover inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent"
+          >
+            View Our Work <ArrowRight className="size-4" />
+          </Link>
         </div>
 
         <div className="mx-auto mt-12 flex max-w-lg justify-center gap-2">
@@ -153,6 +153,28 @@ function HomePage() {
         </div>
       </section>
 
+      {/* About */}
+      <section className="py-20 lg:py-28">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-8">
+          <SectionHeading eyebrow="About us" title="Complete A-to-Z construction solutions" />
+          <Reveal>
+            <div className="space-y-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <p>
+                Led by <strong className="text-foreground">Engr. Muhammad Ali (C.E.O)</strong>, Barkat Engineering
+                Pvt. Ltd. has been delivering quality construction services since 2016.
+              </p>
+              <p>
+                We know construction owners are busy on site and have no time to manage everything. That&apos;s why we
+                provide complete A-to-Z solutions from planning to finishing.
+              </p>
+              <p>
+                <strong className="text-foreground">Our Office:</strong> {site.address}
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="border-y border-border bg-card/30 py-14">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-5 text-center sm:grid-cols-3 lg:px-8">
@@ -172,8 +194,8 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
             eyebrow="What we do"
-            title="Design, construction and finishing under one roof"
-            intro="One accountable team from the first sketch to the last light fitting."
+            title="Civil, Electrical and Mechanical Works"
+            intro="Reliable construction services for Residential, Commercial and Industrial Projects."
           />
           <div className="mt-12">
             <AutoScroller speed={180}>
@@ -194,6 +216,33 @@ function HomePage() {
                 </Reveal>
               ))}
             </AutoScroller>
+          </div>
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="border-y border-border bg-card/30 py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-5 lg:px-8">
+          <SectionHeading
+            eyebrow="Why choose us"
+            title="Trusted work, delivered with care"
+            intro="Everything you need from a dependable construction partner."
+            align="center"
+          />
+          <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "8+ Years Experience",
+              "Licensed Engineers",
+              "Quality Materials",
+              "On-Time Delivery",
+              "Affordable Rates",
+              "Bahria Town Based Trusted Company",
+            ].map((reason) => (
+              <div key={reason} className="lit-panel flex items-center gap-3 bg-card p-5 text-sm font-semibold">
+                <Check className="size-5 shrink-0 text-primary" />
+                <span>{reason}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -293,7 +342,10 @@ function HomePage() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand
+        title="Ready to start your project?"
+        body="Contact our CEO Engr. Muhammad Ali directly for a free site visit and quotation."
+      />
     </>
   );
 }
